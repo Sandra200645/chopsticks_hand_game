@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chopsticks Hand Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-board">
+
+        <div class="top-bar">
+            <h1>CHOPSTICKS</h1>
+            <button id="startButton" class="start-button">START GAME</button>
+            <div id="message" class="message">Press START GAME to begin</div>
+        </div>
+
+        <div class="game-area">
+
+            <section class="player player-one">
+                <div class="player-name">PLAYER 1</div>
+                <div class="turn-dot" id="p1turn"></div>
+
+                <div class="hand-stack">
+                    <div class="hand-box">
+                        <div class="hand-title">HAND 1</div>
+                        <div id="p1hand1" class="hand-photo" data-player="1" data-hand="1"></div>
+                        <div id="p1count1" class="count">1</div>
+                    </div>
+
+                    <div class="hand-box">
+                        <div class="hand-title">HAND 2</div>
+                        <div id="p1hand2" class="hand-photo" data-player="1" data-hand="2"></div>
+                        <div id="p1count2" class="count">1</div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="side-controls left-control">
+                <button id="splitButton" class="split-button">SPLIT</button>
+            </div>
+
+            <section class="player player-two">
+                <div class="player-name">PLAYER 2</div>
+                <div class="turn-dot" id="p2turn"></div>
+
+                <div class="hand-stack">
+                    <div class="hand-box">
+                        <div class="hand-title">HAND 1</div>
+                        <div id="p2hand1" class="hand-photo bottom-hand" data-player="2" data-hand="1"></div>
+                        <div id="p2count1" class="count">1</div>
+                    </div>
+
+                    <div class="hand-box">
+                        <div class="hand-title">HAND 2</div>
+                        <div id="p2hand2" class="hand-photo bottom-hand" data-player="2" data-hand="2"></div>
+                        <div id="p2count2" class="count">1</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- <div class="rule-box">
+            <strong>GAME RULE:</strong> 4 + 2 = 6 → 1 finger. When the total is 5 or 10, the hand becomes OUT.
+            <br>
+            <span>SPLIT: 2 + 0 → 1 + 1 &nbsp; | &nbsp; 4 + 0 → 2 + 2</span>
+        </div> -->
+
+        <div id="winner" class="winner"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

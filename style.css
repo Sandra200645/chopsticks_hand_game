@@ -1,0 +1,278 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffeaf3, #eaf5ff);
+    color: #252238;
+}
+
+.game-board {
+    width: 94%;
+    max-width: 650px;
+    min-height: 94vh;
+    margin: 3vh auto;
+    padding: 18px 16px 20px;
+    background: #ffffff;
+    border: 3px solid #222238;
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(42, 35, 74, .18);
+    position: relative;
+}
+
+.top-bar {
+    text-align: center;
+}
+
+h1 {
+    margin: 2px 0 10px;
+    font-size: 34px;
+    letter-spacing: 4px;
+    color: #ff4f81;
+}
+
+.start-button,
+.split-button {
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.start-button {
+    background: #ff668d;
+    border: 2px solid #9e3154;
+}
+
+.start-button:hover {
+    background: #ff4f7c;
+}
+
+.message {
+    margin: 10px auto 14px;
+    max-width: 420px;
+    min-height: 38px;
+    padding: 9px 12px;
+    border: 2px solid #ddd6ff;
+    border-radius: 10px;
+    background: #f7f4ff;
+    color: #5c49a8;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.game-area {
+    display: grid;
+    grid-template-columns: 1fr 54px 1fr;
+    gap: 8px;
+    align-items: stretch;
+}
+
+.player {
+    min-width: 0;
+    padding: 10px 6px 14px;
+    border: 3px solid;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.player-one {
+    background: #fff1f5;
+    border-color: #ff7b9d;
+}
+
+.player-two {
+    background: #eef6ff;
+    border-color: #6499ff;
+}
+
+.player-name {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.turn-dot {
+    width: 11px;
+    height: 11px;
+    margin: 5px auto 8px;
+    border-radius: 50%;
+    background: #c8c8c8;
+}
+
+.turn-active {
+    background: #22b89f;
+    box-shadow: 0 0 10px rgba(34,184,159,.8);
+}
+
+.hand-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hand-box {
+    min-height: 205px;
+    padding: 5px 4px 8px;
+    border-radius: 13px;
+    background: rgba(255,255,255,.7);
+}
+
+.hand-title {
+    font-size: 10px;
+    font-weight: bold;
+    color: #777;
+    margin-bottom: 2px;
+}
+
+.hand-photo {
+    width: 132px;
+    height: 150px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.hand-photo:hover {
+    filter: brightness(1.03);
+}
+
+.hand-photo.selected {
+    outline: 4px solid #20b9a8;
+    outline-offset: 2px;
+    background-color: #e9fff9;
+}
+
+.hand-photo.out {
+    display: none;
+}
+
+.count {
+    display: inline-block;
+    min-width: 30px;
+    margin-top: 3px;
+    padding: 4px 9px;
+    border-radius: 16px;
+    background: #252238;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.side-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.split-button {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    padding: 14px 9px;
+    min-height: 82px;
+    background: #24b6a1;
+    border: 2px solid #147466;
+}
+
+.split-button:disabled {
+    opacity: .38;
+    cursor: not-allowed;
+}
+
+.rule-box {
+    margin: 14px auto 0;
+    padding: 9px 10px;
+    border-radius: 10px;
+    background: #fff8e8;
+    border: 2px solid #f0d58c;
+    color: #67562c;
+    font-size: 11px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.rule-box span {
+    color: #5b4aa1;
+    font-weight: bold;
+}
+
+.winner {
+    min-height: 35px;
+    margin-top: 8px;
+    text-align: center;
+    color: #7a42cf;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+@media (max-width: 520px) {
+    .game-board {
+        width: 96%;
+        padding: 14px 8px 16px;
+        margin: 2vh auto;
+    }
+
+    h1 {
+        font-size: 29px;
+    }
+
+    .game-area {
+        grid-template-columns: 1fr 45px 1fr;
+        gap: 4px;
+    }
+/* 
+    .hand-photo {
+        width: 112px;
+        height: 135px;
+    } */
+
+
+.hand-photo {
+    width: 150px;
+    height: 132px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+    .hand-box {
+        min-height: 183px;
+    }
+
+    .player-name {
+        font-size: 15px;
+    }
+
+    .split-button {
+        font-size: 11px;
+        padding: 12px 7px;
+    }
+}
+
+
+
+/* ===================================
+   HAND DIRECTION - FACING CENTRE
+   =================================== */
+
+/* Player 1 - Fingers point RIGHT */
+.player-one .hand-photo {
+    transform: rotate(90deg);
+}
+
+/* Player 2 - Fingers point LEFT */
+.player-two .hand-photo {
+    transform: rotate(-90deg);
+}
