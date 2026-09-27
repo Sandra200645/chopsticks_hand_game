@@ -55,19 +55,19 @@ function startGame() {
 function getHandImage(value) {
 
     if (value == 1) {
-        return "images/hand1.png";
+        return "hand1.png";
     }
 
     if (value == 2) {
-        return "images/hand2.png";
+        return "hand2.png";
     }
 
     if (value == 3) {
-        return "images/hand3.png";
+        return "hand3.png";
     }
 
     if (value == 4) {
-        return "images/hand4.png";
+        return "hand4.png";
     }
 
     return "";
@@ -466,6 +466,7 @@ document.getElementById("p2hand2").addEventListener(
 
 updateHands();
 updateSplitButton();
+
 
 
 
